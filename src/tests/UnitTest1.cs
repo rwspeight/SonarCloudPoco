@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using library;
+using System.Diagnostics;
 
 namespace tests
 {
@@ -8,6 +10,9 @@ namespace tests
         [Fact]
         public void Test1()
         {
+
+          var c = new Class1();
+          Assert.Equal(2, c.Add(1, 1));
 
         }
     }
