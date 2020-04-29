@@ -10,8 +10,8 @@ jobs:
           name: Install dependencies and build project
           command: dotnet build src
       - run:
-        name: Install utilities
-        command: apt-get update && apt-get install unzip
+          name: Install utilities
+          command: apt-get update && apt-get install unzip
       - sonarcloud/scan
 
 orbs:
