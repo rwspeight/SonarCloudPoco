@@ -13,7 +13,7 @@ namespace library
         if(left > right) { 
           return left + right;
         } else {
-          return left + right;
+          return right + left;
       }
       
       }
