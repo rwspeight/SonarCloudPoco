@@ -3,32 +3,18 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+      - image: rwspeight/dotnet-sonar-scanner
     steps:
       - checkout
       - run:
-          name: Install Java VM
+          name: Run Code Analysis
           command: |
-            apt-get update
-            apt-get install -y default-jre
-      - run:
-          name: Install Coverage Utilities
-          command: |
-            dotnet tool install --tool-path /usr/local/bin coverlet.console
-            dotnet tool install --tool-path /usr/local/bin dotnet-sonarscanner --version 4.9.0
-      - run:
-          name: Prepare SonarCloud Environment
-          command: dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/tmp/opencover.xml
-      - run:
-          name: Build
-          command: dotnet build -c Release ./src
-      - run:
-          name: Measure Unit Coverage
-          command: coverlet ./src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test ./src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover -o /tmp/opencover.xml
-      - run:
-          name: Finalize SonarCloud Environment 
-          command: dotnet-sonarscanner end  -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63"
-
+            scan.sh \
+              rwspeight_SonarCloudPoco \
+              badger-works \
+              8d0393d221f8880b0a828af1129b9bd2065f0c63 \
+              ./src/tests/bin/Release/netcoreapp3.1/tests.dll \
+              ./src 
 workflows:
   main:
     jobs:
