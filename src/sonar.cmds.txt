@@ -1,0 +1,100 @@
+  268* 
+  269  ls a
+  270  ls -a
+  271  find .sonarqube/
+  272  less .sonarqube//out/0/FilesToAnalyze.txt
+  273  ls
+  274  find .sonarqube/ -ls
+  275  ls
+  276  less coverage.json 
+  277  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f lscov
+  278  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover
+  279  less coverage.
+  280  less coverage.opencover.xml 
+  281  git branch
+  282  ls tests
+  283  rm tests/coverage.json 
+  284  ls
+  285  cd coverage.*
+  286  ls
+  287  rm coverage.*
+  288  ls
+  289  ls tests/tests.csproj 
+  290  vi tests/tests.csproj 
+  291  dotnet build -c Release
+  292  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover
+  293  vi tests/UnitTest1.cs 
+  294  dotnet build
+  295  dotnet build -c Release
+  296  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover
+  297  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover -v detailed
+  298  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover --verbosity detailed
+  299  lessl library/Class1.cs 
+  300  less library/Class1.cs 
+  301  vi  library/Class1.cs 
+  302  dotnet build -c Release
+  303  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover --verbosity detailed
+  304  vi tests/UnitTest1.cs 
+  305  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover --verbosity detailed
+  306  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover -v detailed
+  307  dotnet build -c Release
+  308  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover -v detailed
+  309  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover -verbosity detailed
+  310  coverlet tests/bin/Release/netcoreapp3.1/test.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover --verbosity detailed
+  311  dotnet build -c Release
+  312  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test ./tests/ --no-build" -f opencover --verbosity detailed
+  313  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover --verbosity detailed
+  314  vi tests/UnitTest1.cs 
+  315  dotnet build -c Release
+  316  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover --verbosity detailed
+  317  dotnet build -c Release
+  318  ls
+  319  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63 -o:badger-works -h
+  320  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63 -o:badger-works -h
+  321  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63 -o:badger-works
+  322  ls .sonarqube/conf/SonarQubeAnalysisConfig.xml 
+  323  less .sonarqube/conf/SonarQubeAnalysisConfig.xml 
+  324  ls
+  325  ls tests/tests.csproj 
+  326  cat tests/tests.csproj 
+  327  history | grep coverlet
+  328  dotnet build -c Release
+  329  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover --verbosity detailed
+  330  vi tests/UnitTest1.cs 
+  331  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover --verbosity detailed
+  332  dotnet build -c Release
+  333  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover --verbosity detailedlljlhbbbbbbbb
+  334  dotnet-sonarscanner end  -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63
+  335  dotnet-sonarscanner end  -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63 -h
+  336  dotnet-sonarscanner end
+  337  vi tests/UnitTest1.cs 
+  338  dotnet tool install --global dotnet-sonarscanner --version 4.9.0
+  339  dotnet-sonarscanner --version
+  340  dotnet-sonarscanner -v
+  341  dotnet-sonarscanner -h
+  342  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco:8d0393d221f8880b0a828af1129b9bd2065f0c63 -o:badger-works -d::sonar.login="kdjf" 
+  343  history | grep "sonarscanner begin"
+  344  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d::sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  345  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  346  dotnet build -c Release
+  347  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build"
+  348  ls
+  349  dotnet-sonarscanner end  -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  350  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  351  dotnet build -c Release
+  352  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/Users/rws0155/code/SonarCloudPoco/src/coverage.json"
+  353  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/Users/rws0155/code/SonarCloudPoco/src/coverage.json
+  354  dotnet build -c Release
+  355  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover
+  356  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/Users/rws0155/code/SonarCloudPoco/src/coverage.opencover.xml
+  357  dotnet build -c Release
+  358  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover
+  359  dotnet-sonarscanner end  -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  360  dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/Users/rws0155/code/SonarCloudPoco/src/coverage.opencover.xml -d:sonar.sources=.
+  361  dotnet build -c Release
+  362  coverlet /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test /Users/rws0155/code/SonarCloudPoco/src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover
+  363  dotnet-sonarscanner end  -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" 
+  364  ls
+  365  less coverage.opencover.xml 
+  366  history
+  367  history | tail -100 > sonar.cmds.txt

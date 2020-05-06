@@ -7,15 +7,22 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies and build project
-          command: dotnet build src
+          name: Install Coverage Utilities
+          command: |
+            dotnet tool install --tool-path /usr/local/bin coverlet.console
+            dotnet tool install --tool-path /usr/local/bin dotnet-sonarscanner --version 4.9.0
       - run:
-          name: Install utilities
-          command: apt-get update && apt-get install unzip
-      - sonarcloud/scan
-
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.1
+          name: Prepare SonarCloud Environment
+          command: dotnet-sonarscanner begin  -d:sonar.host.url=https://sonarcloud.io -key:rwspeight_SonarCloudPoco -o:badger-works -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63" -d:sonar.cs.opencover.reportsPaths=/tmp/opencover.xml
+      - run:
+          name: Build
+          command: dotnet build -c Release ./src
+      - run:
+          name: Measure Unit Coverage
+          command: coverlet ./src/tests/bin/Release/netcoreapp3.1/tests.dll --target "dotnet" --targetargs "test ./src/tests/bin/Release/netcoreapp3.1/tests.dll --no-build" -f opencover -o /tmp/opencover.xml
+      - run:
+          name: Finalize SonarCloud Environment 
+          command: dotnet-sonarscanner end  -d:sonar.login="8d0393d221f8880b0a828af1129b9bd2065f0c63"
 
 workflows:
   main:

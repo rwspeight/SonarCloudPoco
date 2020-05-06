@@ -10,7 +10,12 @@ namespace library
 
       public int Add(int left, int right)
       {
-        return left + right;
+        if(left > right) { 
+          return left + right;
+        } else {
+          return left + right;
+      }
+      
       }
     }
 }
