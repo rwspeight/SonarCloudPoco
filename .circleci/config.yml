@@ -7,6 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Java VM
+          command: |
+            apt-get update
+            apt-get install -y default-jre
+      - run:
           name: Install Coverage Utilities
           command: |
             dotnet tool install --tool-path /usr/local/bin coverlet.console
