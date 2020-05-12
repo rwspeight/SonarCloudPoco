@@ -10,8 +10,8 @@ jobs:
           name: Run Code Analysis
           command: |
             scan.sh \
-              rwspeight_SonarCloudPoco \
-              badger-works \
+              ${SONAR_PROJECT_KEY} \
+              ${SONAR_ORGANIZATION} \
               ${SONAR_AUTH_TOKEN} \
               tests.dll \
               ./src 
