@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  analyze:
     docker:
       - image: rwspeight/dotnet-sonar-scanner
     steps:
@@ -12,11 +12,11 @@ jobs:
             scan.sh \
               rwspeight_SonarCloudPoco \
               badger-works \
-              ${SONAR_AUTH_TOKEN} \
+              ${SONAR_AUTH_} \
               ./src/tests/bin/Release/netcoreapp3.1/tests.dll \
               ./src 
 workflows:
   main:
     jobs:
-      - build:
+      - analyze:
           context: SonarCloud
