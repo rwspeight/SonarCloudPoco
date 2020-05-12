@@ -13,7 +13,7 @@ jobs:
               rwspeight_SonarCloudPoco \
               badger-works \
               ${SONAR_AUTH_TOKEN} \
-              ./src/tests/bin/Release/netcoreapp3.1/tests.dll \
+              tests.dll \
               ./src 
 workflows:
   main:
